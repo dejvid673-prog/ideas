@@ -1,14 +1,33 @@
 # INDEX — mapa pamięci projektowej
 
-Pełny indeks pomysłów. Służy do szybkiego odnajdywania właściwego kontekstu przed rozpoczęciem lub kontynuacją rozmowy.
-
-Przy komendzie `Zapisz w pomysłach` indeks musi zostać sprawdzony i w razie potrzeby zaktualizowany.
+Pełny indeks pomysłów. Repo organizuje wiedzę według rzeczywistych inicjatyw, a nie według liczby rozmów. Nowa rozmowa dotycząca tego samego problemu aktualizuje istniejący pomysł.
 
 ## Aktywne
 
 | ID | Pomysł | Obszar | Tagi | Etap | Priorytet | Najważniejszy kontekst | Aktualizacja |
 |---|---|---|---|---|---|---|---|
-| IDEA-0001 | [7DEJV Order Operations Command Center](./order-operations-command-center/README.md) | Operations / UI / Back Office | prestashop, allegro, erli, orders, packing, realtime, multi-monitor, printing, scale, agents | concept-design | P1 | Centralna PWA do zamówień + Packing Workspace na 1/2 monitory + Local Agent dla drukarki/wagi + przyszły event-driven AI | 2026-08-21 |
+| IDEA-0001 | [7DEJV Order Operations Command Center](./order-operations-command-center/README.md) | Operations / UI / Back Office | orders, packing, realtime, printing | concept-design | P1 | Centralna PWA do zamówień + Packing Workspace + Local Agent | 2026-08-21 |
+| IDEA-0002 | [7DEJV OS — AI/GitHub Control Plane](./7dejv-os-control-plane/README.md) | AI / Automation / Infrastructure | github, codex, agents, skills, hooks | architecture-audit | P1 | Nadrzędny model pracy ChatGPT→GitHub→Codex→testy→review | 2026-08-21 |
+| IDEA-0003 | [7DEJV MCP Ecosystem](./mcp-ecosystem/README.md) | AI / Integrations | mcp, docker, github, prestashop | research | P1 | Kontrolowana warstwa narzędzi MCP dla agentów | 2026-08-21 |
+| IDEA-0004 | [7DEJV Local Task Runner](./local-task-runner/README.md) | Automation / Infrastructure | windows, scheduler, codex, git | concept | P2 | Lokalny scheduler/runner z Git Guard, logami i blokadami | 2026-08-21 |
+| IDEA-0005 | [PrestaShop Local AI Agent](./prestashop-local-ai-agent/README.md) | PrestaShop / AI | prestashop9, api, audit, products | design | P1 | Kontrolowany audyt i zatwierdzane operacje na PrestaShop | 2026-08-21 |
+| IDEA-0006 | [Marketplace Product Control & Audit](./marketplace-product-control/README.md) | Marketplace / Products | erli, allegro, product-master, shipping | concept-research | P1 | Kontrola danych produktu, logistyki i różnic PS↔marketplace | 2026-08-21 |
+| IDEA-0007 | [Staw Expert — program kontroli splewki](./staw-expert-argulus-program/README.md) | Research / R&D / Products | argulus, fish, pond, research | research | P2 | Evidence-based program prewencji/wspomagania/kuracji | 2026-08-21 |
+| IDEA-0008 | [Staw Expert — kontrolowane uwalnianie tlenu](./controlled-oxygen-release/README.md) | Research / R&D / Products | oxygen, CaO2, water-quality | research-prototype | P2 | Badanie wkładu/preparatu o kontrolowanym profilu uwalniania | 2026-08-21 |
+| IDEA-0009 | [Business Communications & Administration Automation](./business-communications-automation/README.md) | Business / Administration / AI | email, invoices, ksef, ai-agent | concept | P2 | Centralizacja poczty i administracji z kontrolowanym AI | 2026-08-21 |
+| IDEA-0010 | [YouTube Channel Diagnostics & Recovery](./youtube-channel-diagnostics/README.md) | Marketing / Analytics | youtube, comments, analytics | research | P3 | Metoda diagnozy spadków i odbudowy kanału | 2026-08-21 |
+| IDEA-0011 | [AI-Assisted Workstation & Device Environment](./ai-assisted-workstation/README.md) | Infrastructure / Productivity | windows, android, screen-sharing | exploration | P3 | Standard stanowiska dom/praca i środowiska mobilnego | 2026-08-21 |
+
+## Główne klastry
+
+### 7DEJV OS
+IDEA-0002 jest projektem nadrzędnym. IDEA-0003, IDEA-0004 i IDEA-0005 są wyspecjalizowanymi elementami ekosystemu. IDEA-0011 opisuje środowisko, na którym system działa.
+
+### Operations / e-commerce
+IDEA-0001 jest główną warstwą operacyjną zamówień. IDEA-0006 odpowiada za jakość i kontrolę danych produktowych/marketplace. IDEA-0009 dostarcza kontekst komunikacji i administracji.
+
+### Staw Expert R&D
+IDEA-0007 i IDEA-0008 są osobnymi torami badawczymi. Nie należy łączyć terapii, preparatów ani procedur tylko dlatego, że dotyczą wody/ryb; każda interakcja wymaga osobnej walidacji.
 
 ## Wstrzymane
 
@@ -30,31 +49,10 @@ Historia pozostaje widoczna. Pomysłów nie usuwamy.
 |---|---|---|---|---|---|
 | — | Brak | — | — | — | — |
 
-## Kategorie / obszary
+## Rozmowy wykorzystane przy konsolidacji
 
-Ta sekcja jest rozwijana wraz z repo. Kategorie mają pomagać odnaleźć wiedzę, a nie wymuszać sztuczną hierarchię folderów.
-
-Przykładowe obszary:
-- Operations
-- PrestaShop
-- Marketplace
-- Logistics
-- Products
-- AI / Automation
-- UI / Back Office
-- Finance / Administration
-- Research / R&D
-- Infrastructure
+W obecnym przebiegu wykorzystano dostępny kontekst m.in. z rozmów: `Kontrola listów przewozowych`, `Projekt modułu PrestaShop`, `Research serwerów MCP`, `Udostępnianie projektów Codex`, `Hooks środowiska wtyczki`, `Wybór skrzynki firmowej`, `Automatyzacja startu firmy`, `BDO dla JDG`, `Znani ichtiolodzy w Polsce`, rozmów o CaO2/tlenie, `Analiza kanału YouTube`, `Zarządzanie Androidem z Windows` i rozmów o udostępnianiu ekranu. Lista nie jest deklaracją kompletności całej historii konta — obejmuje rozmowy dostępne podczas tej konsolidacji.
 
 ## Zasada wyszukiwania
 
-Przed rozpoczęciem podobnego projektu agent powinien szukać nie tylko po nazwie pomysłu, ale również po:
-- problemie biznesowym;
-- systemach i integracjach;
-- tagach;
-- nazwach funkcji;
-- istotnych decyzjach;
-- alternatywnych nazwach używanych w rozmowach;
-- relacjach między pomysłami.
-
-Celem jest odnalezienie wcześniejszych ustaleń nawet wtedy, gdy użytkownik w nowej rozmowie użyje innej nazwy niż poprzednio.
+Przed utworzeniem nowego pomysłu szukaj po problemie, systemach, tagach, funkcjach, alternatywnych nazwach, decyzjach i relacjach. Jeśli cel jest ten sam, aktualizuj istniejący pomysł zamiast tworzyć duplikat.
