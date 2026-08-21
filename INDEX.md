@@ -17,14 +17,15 @@ Pełny indeks pomysłów. Repo organizuje wiedzę według rzeczywistych inicjaty
 | IDEA-0009 | [Business Communications & Administration Automation](./business-communications-automation/README.md) | Business / Administration / AI | email, invoices, ksef, ai-agent | concept | P2 | Centralizacja poczty i administracji z kontrolowanym AI | 2026-08-21 |
 | IDEA-0010 | [YouTube Channel Diagnostics & Recovery](./youtube-channel-diagnostics/README.md) | Marketing / Analytics | youtube, comments, analytics | research | P3 | Metoda diagnozy spadków i odbudowy kanału | 2026-08-21 |
 | IDEA-0011 | [AI-Assisted Workstation & Device Environment](./ai-assisted-workstation/README.md) | Infrastructure / Productivity | windows, android, screen-sharing | exploration | P3 | Standard stanowiska dom/praca i środowiska mobilnego | 2026-08-21 |
+| IDEA-0012 | [7DEJV Home Automation Server — Yoga 500 + n8n](./home-automation-server/README.md) | Automation / Infrastructure / Self-hosting | n8n, docker, yoga-500, tailscale, cloudflare, backup | concept-design | P1 | Lokalny Automation Node 24/7: n8n, PostgreSQL, backup 4 TB, zdalny dostęp, domena i audyt oparty na dowodach | 2026-08-21 |
 
 ## Główne klastry
 
 ### 7DEJV OS
-IDEA-0002 jest projektem nadrzędnym. IDEA-0003, IDEA-0004 i IDEA-0005 są wyspecjalizowanymi elementami ekosystemu. IDEA-0011 opisuje środowisko, na którym system działa.
+IDEA-0002 jest projektem nadrzędnym. IDEA-0003, IDEA-0004 i IDEA-0005 są wyspecjalizowanymi elementami ekosystemu. IDEA-0011 opisuje środowisko, na którym system działa. IDEA-0012 dostarcza lokalną, stale działającą warstwę infrastruktury i automatyzacji n8n.
 
 ### Operations / e-commerce
-IDEA-0001 jest główną warstwą operacyjną zamówień. IDEA-0006 odpowiada za jakość i kontrolę danych produktowych/marketplace. IDEA-0009 dostarcza kontekst komunikacji i administracji.
+IDEA-0001 jest główną warstwą operacyjną zamówień. IDEA-0006 odpowiada za jakość i kontrolę danych produktowych/marketplace. IDEA-0009 dostarcza kontekst komunikacji i administracji. IDEA-0012 może hostować backend automatyzacji, backupy i integracje wspierające te projekty.
 
 ### Staw Expert R&D
 IDEA-0007 i IDEA-0008 są osobnymi torami badawczymi. Nie należy łączyć terapii, preparatów ani procedur tylko dlatego, że dotyczą wody/ryb; każda interakcja wymaga osobnej walidacji.
@@ -51,7 +52,7 @@ Historia pozostaje widoczna. Pomysłów nie usuwamy.
 
 ## Rozmowy wykorzystane przy konsolidacji
 
-W obecnym przebiegu wykorzystano dostępny kontekst m.in. z rozmów: `Kontrola listów przewozowych`, `Projekt modułu PrestaShop`, `Research serwerów MCP`, `Udostępnianie projektów Codex`, `Hooks środowiska wtyczki`, `Wybór skrzynki firmowej`, `Automatyzacja startu firmy`, `BDO dla JDG`, `Znani ichtiolodzy w Polsce`, rozmów o CaO2/tlenie, `Analiza kanału YouTube`, `Zarządzanie Androidem z Windows` i rozmów o udostępnianiu ekranu. Lista nie jest deklaracją kompletności całej historii konta — obejmuje rozmowy dostępne podczas tej konsolidacji.
+W obecnym przebiegu wykorzystano dostępny kontekst m.in. z rozmów: `Kontrola listów przewozowych`, `Projekt modułu PrestaShop`, `Research serwerów MCP`, `Udostępnianie projektów Codex`, `Hooks środowiska wtyczki`, `Wybór skrzynki firmowej`, `Automatyzacja startu firmy`, `BDO dla JDG`, `Znani ichtiolodzy w Polsce`, rozmów o CaO2/tlenie, `Analiza kanału YouTube`, `Zarządzanie Androidem z Windows`, rozmów o udostępnianiu ekranu oraz rozmowy z 2026-08-21 o Yoga 500 jako lokalnym serwerze n8n/self-hosted. Lista nie jest deklaracją kompletności całej historii konta — obejmuje rozmowy dostępne podczas tej konsolidacji.
 
 ## Zasada wyszukiwania
 
