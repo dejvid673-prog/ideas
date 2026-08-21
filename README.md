@@ -4,149 +4,46 @@ Centralne repozytorium trwałej pamięci pomysłów, projektów i ustaleń powst
 
 ## Po co istnieje to repo
 
-Najważniejszym problemem, który rozwiązuje `ideas`, jest utrata ciągłości między rozmowami. Temat może rozpocząć się w jednym czacie, wrócić po kilku dniach w innym, a następnie zostać połączony z jeszcze inną koncepcją. Repo ma sprawić, że wcześniejsze decyzje, szczegółowe ustalenia, research, warianty i odrzucone rozwiązania nie przepadają.
+Temat może rozpocząć się w jednym czacie, wrócić w innym i połączyć się z kolejną koncepcją. Repo ma zachować decyzje, wymagania, research, warianty, odrzucone rozwiązania i następne kroki. **Jednostką repo jest pomysł/projekt, nie rozmowa.**
 
-**Repo nie jest przede wszystkim backlogiem ani kolekcją krótkich opisów. Jest zewnętrzną pamięcią projektową.**
+Pełne zasady: [`RULES.md`](./RULES.md). Wzorzec: [`IDEA_TEMPLATE.md`](./IDEA_TEMPLATE.md). Mapa: [`INDEX.md`](./INDEX.md).
 
-Dobry zapis ma pozwolić agentowi wejść w temat w nowej rozmowie bez rozpoczynania analizy od zera.
+## Komenda `Zapisz w pomysłach`
 
-## Komenda: `Zapisz w pomysłach`
+Oznacza: sprawdź indeks i istniejące pomysły, rozpoznaj aktualizację/nowy temat/merge, zachowaj istotne konkrety, oznacz fakty i hipotezy, zaktualizuj relacje, historię i indeks. Pomysłów nie usuwamy.
 
-Ta fraza oznacza wykonanie pełnej procedury zapisu/aktualizacji repo `dejvid673-prog/ideas`.
+## Klasy wiedzy
 
-Agent automatycznie:
-1. sprawdza istniejące pomysły i indeks;
-2. rozpoznaje, czy aktualizuje istniejący temat, tworzy nowy, czy łączy wcześniejsze;
-3. zachowuje szczegółowe ustalenia z dostępnego kontekstu;
-4. zapisuje aktualny stan, decyzje, wymagania, warianty, rzeczy zweryfikowane, odrzucone i otwarte;
-5. aktualizuje relacje i historię;
-6. aktualizuje `INDEX.md` oraz — jeśli potrzebne — skrót poniżej;
-7. w miarę możliwości aktualizuje historię rozmów;
-8. nigdy nie usuwa istniejącego pomysłu.
+`DECISION` · `REQUIREMENT` · `VERIFIED` · `PROPOSAL` · `HYPOTHESIS` · `TODO_VERIFY` · `REJECTED` · `OPEN`
 
-Użytkownik nie musi ręcznie podawać kategorii, nazwy folderu ani statusu.
+## Aktywne pomysły
+
+| ID | Pomysł | Priorytet |
+|---|---|---|
+| IDEA-0001 | [7DEJV Order Operations Command Center](./order-operations-command-center/README.md) | P1 |
+| IDEA-0002 | [7DEJV OS — AI/GitHub Control Plane](./7dejv-os-control-plane/README.md) | P1 |
+| IDEA-0003 | [7DEJV MCP Ecosystem](./mcp-ecosystem/README.md) | P1 |
+| IDEA-0004 | [7DEJV Local Task Runner](./local-task-runner/README.md) | P2 |
+| IDEA-0005 | [PrestaShop Local AI Agent](./prestashop-local-ai-agent/README.md) | P1 |
+| IDEA-0006 | [Marketplace Product Control & Audit](./marketplace-product-control/README.md) | P1 |
+| IDEA-0007 | [Staw Expert — program kontroli splewki](./staw-expert-argulus-program/README.md) | P2 |
+| IDEA-0008 | [Staw Expert — kontrolowane uwalnianie tlenu](./controlled-oxygen-release/README.md) | P2 |
+| IDEA-0009 | [Business Communications & Administration Automation](./business-communications-automation/README.md) | P2 |
+| IDEA-0010 | [YouTube Channel Diagnostics & Recovery](./youtube-channel-diagnostics/README.md) | P3 |
+| IDEA-0011 | [AI-Assisted Workstation & Device Environment](./ai-assisted-workstation/README.md) | P3 |
 
 ## Najważniejsza zasada jakości
 
-**Krótkie streszczenie nie wystarcza.** Największą wartość mają konkretne ustalenia, które normalnie trzeba byłoby ponownie odtwarzać w następnej rozmowie.
+Krótki opis nie wystarcza. Karta pomysłu ma pozwolić agentowi po kilku tygodniach odtworzyć: cel, aktualne decyzje, wymagania, preferowany kierunek, rzeczy odrzucone, otwarte kwestie i następny krok — bez rozpoczynania analizy od zera.
 
-Każdy rozwinięty pomysł powinien mieć na początku sekcję `Aktualny stan — przeczytaj najpierw`, a w niej:
-- cel;
-- najważniejsze aktualne decyzje;
-- obowiązkowe wymagania i ograniczenia;
-- preferowany obecnie kierunek;
-- rzeczy świadomie odrzucone lub poza zakresem;
-- najważniejsze otwarte kwestie;
-- następny sensowny krok.
+## Historia i rozmowy
 
-Dalej zachowywane są szczegóły potrzebne do zrozumienia **dlaczego** podjęto te decyzje.
-
-## Historia jest nienaruszalna
-
-**Pomysłów nigdy nie usuwamy.** Mogą zostać połączone, zastąpione, odrzucone, wstrzymane lub wdrożone, ale ich dokumentacja pozostaje.
-
-Nowa rozmowa nie oznacza nowego pomysłu. Jeżeli dotyczy tego samego problemu i celu, aktualizujemy istniejący folder.
-
-Jeżeli kilka pomysłów świadomie łączymy w nową koncepcję, powstaje nowy folder z sekcją `Geneza / powstał z`. Źródłowe foldery pozostają i wskazują następcę.
-
-## Struktura repo
-
-```text
-ideas/
-├── README.md            # wejście do repo i najważniejsze zasady
-├── RULES.md             # szczegółowy kontrakt pamięci i zapisu
-├── IDEA_TEMPLATE.md     # wzorzec szczegółowej karty pomysłu
-├── INDEX.md             # pełna mapa i wyszukiwalny indeks pomysłów
-│
-└── <idea-slug>/
-    ├── README.md        # aktualny stan + pełna wiedza o pomyśle
-    ├── conversation.md  # transcript lub oznaczona rekonstrukcja rozmów
-    ├── decisions.md     # opcjonalnie: rozbudowana historia decyzji
-    ├── architecture.md  # opcjonalnie: szczegóły architektury
-    ├── research.md      # opcjonalnie: research i porównania
-    ├── sources.md       # opcjonalnie: źródła i dokumentacja
-    └── assets/          # opcjonalnie: mockupy, diagramy, screenshoty
-```
-
-Nie każdy pomysł musi mieć wszystkie pliki. Dodatkowe pliki tworzymy wtedy, gdy poprawiają możliwość odzyskania wiedzy, a nie dla samej struktury.
-
-## Metadane
-
-Każdy pomysł powinien otrzymać trwałe ID i machine-readable metadata, np.:
-
-```yaml
----
-id: IDEA-0001
-title: Order Command Center
-slug: order-command-center
-area: Operations
-tags: [prestashop, allegro, erli, orders]
-created: 2026-08-21
-updated: 2026-08-21
-lifecycle: active
-stage: design
-outcome: none
-priority: P2
----
-```
-
-ID pozostaje stałe nawet wtedy, gdy nazwa pomysłu ewoluuje.
-
-## Oznaczanie wiedzy
-
-Ważne ustalenia należy w miarę możliwości klasyfikować:
-
-- `DECISION` — decyzja;
-- `REQUIREMENT` — wymaganie;
-- `VERIFIED` — informacja zweryfikowana;
-- `PROPOSAL` — propozycja;
-- `HYPOTHESIS` — hipoteza;
-- `TODO_VERIFY` — wymaga sprawdzenia;
-- `REJECTED` — rozważone i odrzucone wraz z przyczyną;
-- `OPEN` — pytanie nierozstrzygnięte.
-
-Zapobiega to sytuacji, w której w kolejnej rozmowie dawna propozycja zostanie błędnie potraktowana jako podjęta decyzja.
-
-## Relacje
-
-Stosowane relacje mogą obejmować:
-- `PARENT_OF` / `CHILD_OF`;
-- `DEPENDS_ON`;
-- `RELATED_TO`;
-- `MERGED_FROM` / `MERGED_INTO`;
-- `SUPERSEDES` / `SUPERSEDED_BY`;
-- `IMPLEMENTED_IN`.
-
-Relacja powinna zawierać opis tego, **co konkretnie łączy pomysły**, a nie sam link.
-
-## Rozmowy
-
-Jeżeli dostępny jest pełny transcript i wnosi wartość, można go zachować w `conversation.md`. Jeżeli pełny zapis nie jest dostępny, należy stworzyć szczegółową, wyraźnie oznaczoną rekonstrukcję wyłącznie na podstawie dostępnego kontekstu.
-
-Najważniejsze ustalenia nie mogą pozostać ukryte wyłącznie w historii rozmowy. Muszą trafić również do głównej karty pomysłu.
-
-## Indeks
-
-Pełny indeks znajduje się w [`INDEX.md`](./INDEX.md). Ma umożliwiać odnalezienie tematu nawet wtedy, gdy w nowej rozmowie używana jest inna nazwa niż wcześniej.
-
-### Szybki indeks aktywnych pomysłów
-
-| ID | Pomysł | Obszar | Etap | Najważniejszy kontekst | Aktualizacja |
-|---|---|---|---|---|---|
-| — | Brak zapisanych pomysłów | — | — | — | — |
+Nowa rozmowa nie oznacza nowego pomysłu. Jeśli dotyczy tego samego problemu i celu, aktualizujemy istniejący folder. Jeśli kilka pomysłów jest świadomie łączonych, zachowujemy genezę i relacje. Linków/ID rozmów nie wolno wymyślać; gdy są niedostępne zapisujemy tytuł, datę/słowa kluczowe i `unavailable`.
 
 ## Repo a implementacja
 
-`ideas` jest źródłem prawdy dla genezy, ustaleń, researchu i decyzji. Kod produkcyjny trafia do właściwego repozytorium wykonawczego. Folder pomysłu pozostaje i wskazuje implementację oraz istotne artefakty.
+`ideas` przechowuje genezę, research i decyzje. Kod produkcyjny trafia do właściwych repozytoriów wykonawczych. Stan kodu i dokumentacji technicznej w repo wykonawczym ma pierwszeństwo przed historyczną rozmową.
 
 ## Bezpieczeństwo
 
-Nigdy nie zapisujemy haseł, tokenów, kluczy API, sekretów OAuth, danych klientów ani wartości z `.env`. Można dokumentować wymagane integracje, zakres uprawnień i nazwy zmiennych bez ich wartości.
-
-## Dokumenty sterujące
-
-- [`RULES.md`](./RULES.md) — szczegółowe reguły zapisu i zachowania pamięci.
-- [`IDEA_TEMPLATE.md`](./IDEA_TEMPLATE.md) — wzorzec rozwiniętego pomysłu.
-- [`INDEX.md`](./INDEX.md) — pełna mapa pomysłów.
-
-**Najważniejszym produktem tego repo nie jest lista pomysłów. Jest nim zachowana wiedza, dzięki której nie musimy drugi raz dochodzić do tych samych ustaleń.**
+Nigdy nie zapisujemy haseł, tokenów, kluczy API, sekretów OAuth, danych klientów ani wartości `.env`. Repozytorium było publiczne podczas konsolidacji 2026-08-21, dlatego obecny zapis celowo nie zawiera sekretów ani danych klientów. Docelowo repo powinno być prywatne ze względu na wewnętrzne koncepcje biznesowe i techniczne.
