@@ -18,10 +18,32 @@ Po tej komendzie agent ma automatycznie:
 3. zachować szczegółowe ustalenia z dostępnego kontekstu rozmowy;
 4. zaktualizować kartę pomysłu i indeks;
 5. dopisać historię zmian i źródło nowych ustaleń;
-6. oznaczyć elementy niepewne, nieweryfikowane i otwarte;
-7. nie usuwać wcześniejszej wiedzy tylko dlatego, że zmienił się aktualny kierunek.
+6. zapisać dane pozwalające odnaleźć rozmowę źródłową, jeżeli są dostępne;
+7. oznaczyć elementy niepewne, nieweryfikowane i otwarte;
+8. nie usuwać wcześniejszej wiedzy tylko dlatego, że zmienił się aktualny kierunek.
 
 Użytkownik nie musi podawać kategorii, statusu ani nazwy folderu. Agent klasyfikuje materiał sam.
+
+## Źródło rozmowy i geneza
+
+Każdy pomysł powinien, jeśli tylko dane są dostępne, wskazywać rozmowę, w której się narodził, oraz późniejsze rozmowy, które go istotnie rozwinęły.
+
+Preferowane dane referencyjne:
+- `conversation_title` — dokładna lub możliwie wierna nazwa rozmowy;
+- `conversation_date` — data rozmowy;
+- `conversation_url` — bezpośredni link do rozmowy, jeśli jest dostępny;
+- `conversation_id` — identyfikator rozmowy, jeśli jest dostępny i bezpieczny do zapisania;
+- `origin_note` — krótki opis, w którym momencie i z jakiego problemu narodził się pomysł.
+
+Jeżeli dokładny link lub ID rozmowy nie jest dostępny, **nie wolno go wymyślać**. Wtedy należy zapisać minimum:
+- datę lub przybliżoną datę;
+- tytuł/nazwę rozmowy, jeśli jest znana;
+- słowa kluczowe, po których użytkownik może ją odnaleźć;
+- informację `conversation_url: unavailable`.
+
+Pomysł może mieć wiele wpisów w `source_conversations`. Pierwszy powinien być oznaczony jako `origin`, kolejne jako `development`, `research`, `decision`, `merge` lub inną adekwatną rolą.
+
+W `conversation.md` należy na początku prowadzić sekcję `Mapa rozmów źródłowych`, aby dało się szybko przejść od pomysłu do rozmów, które ukształtowały jego aktualny stan.
 
 ## Priorytet informacji
 
@@ -68,7 +90,8 @@ Przy aktualizacji:
 - nie zastępuj bez śladu wcześniejszych ustaleń;
 - zaznacz, co zostało zmienione i dlaczego;
 - aktualny stan ma być łatwy do odnalezienia;
-- historyczne decyzje zachowuj w historii decyzji lub rozmów.
+- historyczne decyzje zachowuj w historii decyzji lub rozmów;
+- dopisz rozmowę, z której pochodzi nowy materiał, do `source_conversations`.
 
 ## Szczegółowość
 
