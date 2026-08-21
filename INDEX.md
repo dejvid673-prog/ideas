@@ -8,7 +8,7 @@ Przy komendzie `Zapisz w pomysłach` indeks musi zostać sprawdzony i w razie po
 
 | ID | Pomysł | Obszar | Tagi | Etap | Priorytet | Najważniejszy kontekst | Aktualizacja |
 |---|---|---|---|---|---|---|---|
-| — | Brak zapisanych pomysłów | — | — | — | — | — | — |
+| IDEA-0001 | [7DEJV Order Operations Command Center](./order-operations-command-center/README.md) | Operations / UI / Back Office | prestashop, allegro, erli, orders, packing, realtime, multi-monitor, printing, scale, agents | concept-design | P1 | Centralna PWA do zamówień + Packing Workspace na 1/2 monitory + Local Agent dla drukarki/wagi + przyszły event-driven AI | 2026-08-21 |
 
 ## Wstrzymane
 
