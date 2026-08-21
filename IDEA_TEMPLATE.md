@@ -11,9 +11,29 @@ stage: captured
 outcome: none
 priority: unset
 origin: ""
+source_conversations:
+  - role: origin
+    conversation_title: ""
+    conversation_date: YYYY-MM-DD
+    conversation_url: unavailable
+    conversation_id: unavailable
+    keywords: []
+    note: ""
 ---
 
 # Nazwa pomysłu
+
+## 0. Mapa rozmów źródłowych
+
+Ta sekcja ma umożliwiać odnalezienie rozmowy, w której pomysł się narodził, oraz kolejnych rozmów, które go rozwijały.
+
+| Rola | Data | Tytuł rozmowy | Link / ID | Słowa kluczowe | Co wnosiła |
+|---|---|---|---|---|---|
+| origin | YYYY-MM-DD |  | unavailable |  | Narodziny pomysłu |
+
+Jeżeli link lub ID rozmowy jest niedostępny, nie wymyślaj go. Zapisz tytuł, datę, słowa kluczowe i `unavailable`.
+
+---
 
 ## 1. Aktualny stan — przeczytaj najpierw
 
